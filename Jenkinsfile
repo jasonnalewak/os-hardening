@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -la'
-                //sh "sudo rm -rf $WORKSPACE/*"
+                sh "sudo rm -rf $WORKSPACE/*"
             }
         }
 
