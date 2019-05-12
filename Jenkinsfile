@@ -53,8 +53,10 @@ pipeline {
                 script {
                     sh 'sudo apt-get install rubygems -y'
                     sh 'sudo apt-get install ruby-dev -y'
-                    sh 'sudo gem install bundler -v 2.0.1 --no-doc'
-                    sh 'sudo bundle install'
+                    sh 'sudo gem install kitchen-docker source "https://rubygems.org"'
+                    sh 'sudo gem install kitchen-inspec source "https://rubygems.org"'
+                    //sh 'sudo gem install bundler -v 2.0.1 --no-doc'
+                    //sh 'sudo bundle install'
                 }
             }
         }
