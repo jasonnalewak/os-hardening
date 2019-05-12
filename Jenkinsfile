@@ -48,11 +48,10 @@ pipeline {
             }
         }
 
-        /* stage('Install Ruby, Test Kitchen, and needed gems') {
+        stage('Install Ruby, Test Kitchen, and needed gems') {
             steps {
                 script {
-                    sh 'sudo apt-get install gcc-c++ -y'
-                    sh 'sudo usermod -aG root,docker tomcat'
+                    sh 'sudo usermod -aG root, docker tomcat'
                     sh 'sudo apt-get install rubygems -y'
                     sh 'sudo apt-get install ruby-dev -y'
                     sh 'sudo gem install bundler -v 2.0.1 --no-doc'
@@ -60,7 +59,7 @@ pipeline {
                 }
             }
         }
- */
+
 /*         stage('Loading the Packer Hab Pkg') {
             steps {
                 script {
