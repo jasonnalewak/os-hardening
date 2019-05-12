@@ -21,8 +21,8 @@ pipeline {
 
                     ruby_path = sh 'which ruby'
                     if (ruby_path == '/usr/bin/ruby'){
-                        sh 'echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile'
-                        sh 'echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile'
+                        sh '''echo 'eval \\"$(chef shell-init bash)\\"' >> ~/.bash_profile'''
+                        sh '''echo 'export PATH=\\"/opt/chefdk/embedded/bin:$PATH\\"' >> ~/.bash_profile && source ~/.bash_profile'''
                     } else {
                         sh 'which ruby'
                     }
