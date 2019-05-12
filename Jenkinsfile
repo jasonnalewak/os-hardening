@@ -44,7 +44,7 @@ pipeline {
 
         stage('Loading Hardening Cookbook') {
             steps {
-                git credentialsId: 'github', url: 'git@github.com:jasonnalewak/os-hardening.git'
+                git credentialsId: 'repo_key', url: 'git@github.com:jasonnalewak/os-hardening.git'
             }
         }
 
