@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-        stage('Installing Habitat') {
+        /* stage('Installing Habitat') {
             steps {
                 script {
                     def exists = fileExists '/hab/'
@@ -38,7 +38,7 @@ pipeline {
                 }
 
             }
-        }
+        } */
 
         stage('Loading Hardening Cookbook') {
             steps {
@@ -46,7 +46,7 @@ pipeline {
             }
         }
 
-        stage('Install Ruby, Test Kitchen, and needed gems') {
+        /* stage('Install Ruby, Test Kitchen, and needed gems') {
             steps {
                 script {
                     sh 'sudo apt-get install gcc-c++ -y'
@@ -58,7 +58,7 @@ pipeline {
                 }
             }
         }
-
+ */
 /*         stage('Loading the Packer Hab Pkg') {
             steps {
                 script {
