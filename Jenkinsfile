@@ -54,7 +54,7 @@ pipeline {
                     sh 'sudo apt-get install rubygems -y'
                     sh 'sudo apt-get install ruby-dev -y'
                     sh 'sudo gem install bundler -v 2.0.1 --no-doc'
-                    sh 'bundle install'
+                    sh 'sudo bundle install'
                 }
             }
         }
