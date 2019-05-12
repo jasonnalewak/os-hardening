@@ -18,6 +18,15 @@ pipeline {
                         sh 'wget https://packages.chef.io/files/stable/chefdk/3.8.14/ubuntu/18.04/chefdk_3.8.14-1_amd64.deb'
                         sh 'sudo dpkg -i chefdk_3.8.14-1_amd64.deb'
                     }
+
+                    ruby_path = sh 'which ruby'
+                    if (ruby_path == '/usr/bin/ruby'){
+                        sh 'echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile'
+                        sh 'echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile'
+                    } else {
+                        sh 'which ruby'
+                    }
+
                 }
 
             }
