@@ -9,23 +9,6 @@ pipeline {
             }
         }
 
-        /* stage('Installing Habitat') {
-            steps {
-                script {
-                    def exists = fileExists '/hab/'
-                    if (exists) {
-                        echo "Skipping Habitat install - already installed!"
-                    } else {
-                        sh 'sudo apt-get install -y curl'
-                        sh 'curl https://raw.githubusercontent.com/habitat-sh/habitat/master/components/hab/install.sh | sudo bash'
-                        sh 'useradd hab'
-                        sh 'usermod -aG hab hab'
-                    }
-                }
-
-            }
-        } */
-
         stage('Loading Hardening Cookbook') {
             steps {
                 git credentialsId: 'repo_key', url: 'git@github.com:jasonnalewak/os-hardening.git'
@@ -37,6 +20,14 @@ pipeline {
                 script {
                     sh 'cookstyle .'
                     sh 'foodcritic . --tags ~FC070,FC078'
+                }
+            }
+        }
+
+        stage('Test Kitchen') {
+            steps {
+                script {
+                    sh 'kitchen list'
                 }
             }
         }
@@ -80,7 +71,7 @@ pipeline {
         }
         failure {
             echo "Build Failed"
-            mail  body: "Build ${env.JOB_NAME} ${env.BUILD_NUMBER} failed. Please check the build at ${env.JOB_URL}", from: 'admin@acme.com', subject: 'Build Failure', to: 'jnalewak@chef.io'
+            slackSend color: 'bad', message: "Build $JOB_NAME $BUILD_NUMBER failed"
         }
     }
 
