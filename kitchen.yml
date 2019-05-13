@@ -1,8 +1,7 @@
 ---
 driver:
   name: docker
-  binary: docker.io
-  socket: 'unix:///var/run/docker.sock:'
+  socket: unix:///var/run/docker.sock
 
 provisioner:
   name: chef_zero
