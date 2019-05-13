@@ -5,8 +5,6 @@ cookbook_file '/etc/audit/auditd.conf' do
   source 'auditd.conf'
 end
 
-
-
 # remediate motd
 file '/etc/motd' do
   content 'You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
