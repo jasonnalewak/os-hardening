@@ -27,7 +27,7 @@ pipeline {
         stage('Test Kitchen') {
             steps {
                 script {
-                    sh 'kitchen list'
+                    sh 'kitchen test'
                 }
             }
         }
