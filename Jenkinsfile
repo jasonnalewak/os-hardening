@@ -9,16 +9,16 @@ pipeline {
             }
         }
 
-        stage('Installing ChefDK') {
+        stage('Installing Chef Workstation') {
             steps {
                 script {
                     def exists = fileExists '/usr/bin/chef-client'
                     if (exists) {
-                        echo "Skipping ChefDK install - already installed!"
+                        echo "Skipping Chef workstation install - already installed!"
                     } else {
                         sh 'sudo apt-get install -y wget'
-                        sh 'wget https://packages.chef.io/files/stable/chefdk/3.8.14/ubuntu/18.04/chefdk_3.8.14-1_amd64.deb'
-                        sh 'sudo dpkg -i chefdk_3.8.14-1_amd64.deb'
+                        sh 'wget https://packages.chef.io/files/stable/chef-workstation/0.2.53/ubuntu/18.04/chef-workstation_0.2.53-1_amd64.deb'
+                        sh 'sudo dpkg -i chef-workstation_0.2.53-1_amd64.deb'
                     }
                 }
 
@@ -55,8 +55,8 @@ pipeline {
                     sh 'sudo apt-get install ruby-dev -y'
                     sh 'sudo gem install kitchen-docker '
                     sh 'sudo gem install kitchen-inspec '
-                    //sh 'sudo gem install bundler -v 2.0.1 --no-doc'
-                    //sh 'sudo bundle install'
+                    sh 'sudo gem install bundler -v 2.0.1 --no-doc'
+                    sh 'sudo bundle install'
                 }
             }
         }
