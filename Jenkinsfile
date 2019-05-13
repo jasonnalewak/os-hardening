@@ -27,7 +27,7 @@ pipeline {
         stage('Test Kitchen') {
             steps {
                 script {
-                    sh 'kitchen test'
+                    sh 'sudo kitchen test'
                 }
             }
         }
