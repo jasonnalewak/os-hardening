@@ -9,22 +9,6 @@ pipeline {
             }
         }
 
-        stage('Installing Chef Workstation') {
-            steps {
-                script {
-                    def exists = fileExists '/usr/bin/chef-client'
-                    if (exists) {
-                        echo "Skipping Chef workstation install - already installed!"
-                    } else {
-                        sh 'sudo apt-get install -y wget'
-                        sh 'wget https://packages.chef.io/files/stable/chef-workstation/0.2.53/ubuntu/18.04/chef-workstation_0.2.53-1_amd64.deb'
-                        sh 'sudo dpkg -i chef-workstation_0.2.53-1_amd64.deb'
-                    }
-                }
-
-            }
-        }
-
         /* stage('Installing Habitat') {
             steps {
                 script {
@@ -48,15 +32,11 @@ pipeline {
             }
         }
 
-        stage('Install Ruby, Test Kitchen, and needed gems') {
+        stage('Local Testing') {
             steps {
                 script {
-                    sh 'sudo apt-get install rubygems -y'
-                    sh 'sudo apt-get install ruby-dev -y'
-                    sh 'sudo gem install kitchen-docker '
-                    sh 'sudo gem install kitchen-inspec '
-                    sh 'sudo gem install bundler -v 2.0.1 --no-doc'
-                    sh 'sudo bundle install'
+                    sh 'cookstyle .'
+                    sh 'foodcritic .'
                 }
             }
         }
@@ -68,13 +48,7 @@ pipeline {
                 }
             }
         }
-        stage(''){
-            steps {
-                script{
 
-                }
-            }
-        } */
 /*         stage('Loading the Web App Hab Package') {
             steps {
                 script{
@@ -98,8 +72,9 @@ pipeline {
             }
         } */
     }
+
     //post actions
-/*     post {
+    post {
         success {
         slackSend color: '#439FE0', message: "Build $JOB_NAME $BUILD_NUMBER was successful"
         }
@@ -107,6 +82,6 @@ pipeline {
             echo "Build Failed"
             mail  body: "Build ${env.JOB_NAME} ${env.BUILD_NUMBER} failed. Please check the build at ${env.JOB_URL}", from: 'admin@acme.com', subject: 'Build Failure', to: 'jnalewak@chef.io'
         }
-    } */
+    }
 
 }
