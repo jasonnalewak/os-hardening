@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     sh 'cookstyle .'
-                    sh 'foodcritic . --tags ~FC070 ~FC078'
+                    sh 'foodcritic . --tags ~FC070,FC078'
                 }
             }
         }
