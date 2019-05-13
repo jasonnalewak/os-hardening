@@ -34,12 +34,21 @@ pipeline {
         }
 
         stage('Upload Cookbook to S3') {
+            steps {
+
+            }
         }
 
         stage('Create AMI') {
+            steps {
+
+            }
         }
 
         stage('Validate AMI') {
+            steps {
+                
+            }
         }
 
         stage('Send Slack Notification') {
