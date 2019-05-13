@@ -27,7 +27,8 @@ pipeline {
         stage('Test Kitchen') {
             steps {
                 script {
-                    sh 'kitchen test'
+                    sh 'chef gem install kitchen-docker'
+                    sh 'kitchen list'
                 }
             }
         }
