@@ -24,14 +24,6 @@ pipeline {
             }
         }
 
-        stage('Destroy any failed TK instance') {
-            steps {
-                script {
-                    sh 'sudo kitchen destroy'
-                }
-            }
-        }
-
         stage('Test Kitchen') {
             steps {
                 script {
