@@ -2,7 +2,7 @@
 driver:
   name: docker
   binary: docker.io
-  use_sudo: false
+  socket: tcp://localhost:2375
 
 provisioner:
   name: chef_zero
