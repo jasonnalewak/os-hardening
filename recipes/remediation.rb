@@ -36,4 +36,3 @@ end
 package 'rsh-server' do
   action :remove
 end
-
