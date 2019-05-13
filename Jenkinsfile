@@ -62,12 +62,6 @@ pipeline {
                 slackSend color: '#449FE0', message: "Jason Nalewak: Please approve ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.JOB_URL}|Open>)"
             }
             
-        }
-
-        stage('Wait for Input'){
-            steps{
-                input 'Proceed with build?'
-            }
         } 
     }
 
