@@ -5,7 +5,7 @@ cookbook_file '/etc/audit/auditd.conf' do
   source 'auditd.conf'
 end
 
-#remediate motd
+# remediate motd
 file '/etc/motd' do
   content 'You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
     
@@ -23,7 +23,7 @@ file '/etc/motd' do
   
 end
 
-#remediate login.defs
+# remediate login.defs
 cookbook_file '/etc/login.defs' do
   source 'login.defs'
   owner 'root'
@@ -32,7 +32,7 @@ cookbook_file '/etc/login.defs' do
   action :create
 end
 
-#remediate rsh-server
+# remediate rsh-server
 package 'rsh-server' do
   action :remove
 end

@@ -45,7 +45,6 @@ control "xccdf_mil.disa.stig_rule_SV-86483r4_rule" do
   end
 end
 
-
 control "xccdf_mil.disa.stig_rule_SV-86545r2_rule" do
   title "The Red Hat Enterprise Linux operating system must be configured to use the shadow file to store only encrypted representations of passwords."
   desc  "
@@ -155,7 +154,6 @@ control "xccdf_mil.disa.stig_rule_SV-86583r3_rule" do
     its("HostbasedAuthentication") { should cmp "no" }
   end
 end
-
 
 control "xccdf_mil.disa.stig_rule_SV-86591r2_rule" do
   title "The Red Hat Enterprise Linux operating system must not have the rsh-server package installed."
