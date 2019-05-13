@@ -5,6 +5,8 @@ cookbook_file '/etc/audit/auditd.conf' do
   source 'auditd.conf'
 end
 
+
+
 # remediate motd
 file '/etc/motd' do
   content 'You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
@@ -20,5 +22,5 @@ file '/etc/motd' do
   -This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
   
   -Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.'
-  not_if { package("dconf").installed? }
+
 end
