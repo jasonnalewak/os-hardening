@@ -10,8 +10,8 @@ supports 'ubuntu', '>= 16.04'
 supports 'rhel'
 supports 'windows'
 supports 'centos'
-issues_url "none"
-source_url "https://github.com/jasonnalewak/os-hardening.git"
+issues_url 'none'
+source_url 'https://github.com/jasonnalewak/os-hardening.git'
 
 depends 'os-hardening'
 depends 'windows-hardening'
