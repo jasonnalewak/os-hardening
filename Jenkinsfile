@@ -35,19 +35,25 @@ pipeline {
 
         stage('Upload Cookbook to S3') {
             steps {
-
+                script {
+                    sh 'echo "needs implemented" '
+                }
             }
         }
 
         stage('Create AMI') {
             steps {
-
+                script {
+                    sh 'echo "needs implemented" '
+                }
             }
         }
 
         stage('Validate AMI') {
             steps {
-                
+                script {
+                    sh 'echo "needs implemented" '
+                }
             }
         }
 
