@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Delete the workspace') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
                 sh "sudo rm -rf $WORKSPACE/*"
             }
         }
