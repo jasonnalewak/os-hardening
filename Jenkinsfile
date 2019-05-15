@@ -28,7 +28,7 @@ pipeline {
         stage('Test Kitchen') {
             steps {
                 script {
-                    sh 'sudo kitchen test'
+                    sh 'sudo kitchen test  --chef-license=accept-no-persist'
                 }
             }
         }
