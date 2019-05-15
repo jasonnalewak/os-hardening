@@ -2,6 +2,7 @@
 driver:
   name: docker
   socket: unix:///var/run/docker.sock
+  chef_license: <%= ENV['CHEF_LICENSE'] || "accept-no-persist" %>
 
 provisioner:
   name: chef_zero
