@@ -3,31 +3,40 @@ execute 'dconf_update' do
   command 'dconf update'
   action :nothing
 end
+
 service 'ssh_restart' do
   service_name 'sshd'
   action :nothing
 end
+
 execute 'auditd_restart' do # ~FC004
   command 'service auditd restart'
   action :nothing
 end
+
 execute 'do_reboot' do
   command 'shutdown -r 1'
   action :nothing
 end
+
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
-  directory '/etc/audisp' do # added to make cookbook work
-    action :create
-  end
   directory '/etc/audisp' do # added to make cookbook work
     action :create
   end
 end
 
-  file '/etc/audisp/audisp-remote.conf' do
-    action :create_if_missing
+if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
+  directory '/etc/audisp' do # added to make cookbook work
+    action :create
   end
 end
+
+if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
+  file '/etc/audisp/audisp-remote.conf' do
+      action :create_if_missing
+  end
+end
+
 if node['rhel7STIG']['stigrule_95727']['Manage'] || node['rhel7STIG']['stigrule_95727']['Manage']
   file '/etc/audisp/plugins.d/au-remote.conf' do
     action :create_if_missing
