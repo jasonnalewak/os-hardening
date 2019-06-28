@@ -1560,4 +1560,3 @@ default['rhel7STIG']['stigrule_95733']['Severity'] = 'medium'
 default['rhel7STIG']['stigrule_95733']['Setting']['_etc_audisp_audispd_conf_Path'] = '/etc/audisp/audispd.conf'
 default['rhel7STIG']['stigrule_95733']['Setting']['_etc_audisp_audispd_conf_Regexp'] = '^name_format = '
 default['rhel7STIG']['stigrule_95733']['Setting']['_etc_audisp_audispd_conf_Line'] = 'name_format = hostname'
-
