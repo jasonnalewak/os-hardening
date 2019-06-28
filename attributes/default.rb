@@ -1474,7 +1474,7 @@ default['rhel7STIG']['stigrule_87829']['Setting']['nmcli_radio_wifi_off_Command'
 default['rhel7STIG']['stigrule_87829']['Setting']['nmcli_radio_wifi_off_Only_if'] = "[[ $(nmcli radio wifi) == 'enabled' ]]"
 
 # R-92515 RHEL-07-010061
-default['rhel7STIG']['stigrule_92515']['Manage'] = true
+default['rhel7STIG']['stigrule_92515']['Manage'] = false
 default['rhel7STIG']['stigrule_92515']['Title'] = "The Red Hat Enterprise Linux operating system must uniquely identify and must authenticate users using multifactor authentication via a graphical user logon."
 default['rhel7STIG']['stigrule_92515']['Severity'] = 'medium'
 default['rhel7STIG']['stigrule_92515']['Setting']['_etc_dconf_db_local_d_00_defaults_Path'] = '/etc/dconf/db/local.d/00-defaults'

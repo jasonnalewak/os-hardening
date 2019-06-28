@@ -19,3 +19,4 @@ source_url 'https://github.com/jasonnalewak/os-hardening.git'
 
 depends 'os-hardening'
 depends 'windows-hardening'
+depends 'puppet_compat'
