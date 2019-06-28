@@ -16,8 +16,11 @@ execute 'do_reboot' do
   action :nothing
 end
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
-  directory '/etc/audisp/plugins.d' do
+  directory '/etc/audisp' do # added to make cookbook work
     action :create
+  directory '/etc/audisp' do # added to make cookbook work
+    action :create
+  
   end
   
   file '/etc/audisp/audisp-remote.conf' do
