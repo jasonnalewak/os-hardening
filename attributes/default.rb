@@ -1,5 +1,5 @@
 # R-86483 RHEL-07-010030
-default['rhel7STIG']['stigrule_86483']['Manage'] = true
+default['rhel7STIG']['stigrule_86483']['Manage'] = false
 default['rhel7STIG']['stigrule_86483']['Title'] = "The Red Hat Enterprise Linux operating system must display the Standard Mandatory DoD Notice and Consent Banner before granting local or remote access to the system via a graphical user logon."
 default['rhel7STIG']['stigrule_86483']['Severity'] = 'medium'
 default['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Path'] = '/etc/dconf/db/local.d/01-banner-message'

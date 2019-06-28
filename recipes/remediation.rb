@@ -60,17 +60,18 @@ if node['rhel7STIG']['stigrule_86617']['Manage']
     only_if 'rpm -q dconf'
   end
 end
-if node['rhel7STIG']['stigrule_86483']['Manage']
-  ini_setting '_etc_dconf_db_local_d_01_banner_message_86483' do
-    path node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Path']
-    section node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Section']
-    setting node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Option']
-    value node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Value']
-    notifies :run, 'execute[dconf_update]', :delayed
-    only_if node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Only_if']
-    separator '='
-  end
-end
+#currently need to use a Puppet cookbook to make this work, this is only for RHEL using Gnome GUI
+# if node['rhel7STIG']['stigrule_86483']['Manage']
+#   ini_setting '_etc_dconf_db_local_d_01_banner_message_86483' do
+#     path node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Path']
+#     section node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Section']
+#     setting node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Option']
+#     value node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Value']
+#     notifies :run, 'execute[dconf_update]', :delayed
+#     only_if node['rhel7STIG']['stigrule_86483']['Setting']['_etc_dconf_db_local_d_01_banner_message_Only_if']
+#     separator '='
+#   end
+# end
 if node['rhel7STIG']['stigrule_86485']['Manage']
   ini_setting '_etc_dconf_db_local_d_01_banner_message_86485' do
     path node['rhel7STIG']['stigrule_86485']['Setting']['_etc_dconf_db_local_d_01_banner_message_Path']
