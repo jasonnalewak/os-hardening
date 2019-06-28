@@ -253,17 +253,17 @@ if node['rhel7STIG']['stigrule_86547']['Manage']
   end
 end
 if node['rhel7STIG']['stigrule_86551']['Manage']
-  %x(awk -F: '{cmd="id -u "$1|getline uid;if($4<1 && uid>=1000 && uid!=65534 && uid!=65535 && uid!=4294967294 && uid!=4294967295){print $1}}' /etc/shadow).each_line do |foreach|
-  execute 'chage__m_1_user_86551' do
-    command node['rhel7STIG']['stigrule_86551']['Setting']['chage__m_1_user_Command'] + " #{foreach}"
-  end
+  `awk -F: '{cmd="id -u "$1|getline uid;if($4<1 && uid>=1000 && uid!=65534 && uid!=65535 && uid!=4294967294 && uid!=4294967295){print $1}}' /etc/shadow`.each_line do |foreach|
+    execute 'chage__m_1_user_86551' do
+      command node['rhel7STIG']['stigrule_86551']['Setting']['chage__m_1_user_Command'] + " #{foreach}"
+    end
   end
 end
 if node['rhel7STIG']['stigrule_86555']['Manage']
-  %x(awk -F: '{cmd="id -u "$1|getline uid;if($5>60 && uid>=1000 && uid!=65534 && uid!=65535 && uid!=4294967294 && uid!=4294967295){print $1}}' /etc/shadow).each_line do |foreach|
-  execute 'chage__M_60_user_86555' do
-    command node['rhel7STIG']['stigrule_86555']['Setting']['chage__M_60_user_Command'] + " #{foreach}"
-  end
+  `awk -F: '{cmd="id -u "$1|getline uid;if($5>60 && uid>=1000 && uid!=65534 && uid!=65535 && uid!=4294967294 && uid!=4294967295){print $1}}' /etc/shadow`.each_line do |foreach|
+    execute 'chage__M_60_user_86555' do
+      command node['rhel7STIG']['stigrule_86555']['Setting']['chage__M_60_user_Command'] + " #{foreach}"
+    end
   end
 end
 if node['rhel7STIG']['stigrule_86563']['Manage']
