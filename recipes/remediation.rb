@@ -16,13 +16,17 @@ execute 'do_reboot' do
   action :nothing
 end
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
+  directory '/etc/audisp' do
+    action :create_if_missing
+  end
+  
   file '/etc/audisp/audisp-remote.conf' do
-    action :create
+    action :create_if_missing
   end
 end
 if node['rhel7STIG']['stigrule_95727']['Manage'] || node['rhel7STIG']['stigrule_95727']['Manage']
   file '/etc/audisp/plugins.d/au-remote.conf' do
-    action :create
+    action :create_if_missing
   end
 end
 if node['rhel7STIG']['stigrule_86607']['Manage']
