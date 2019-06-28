@@ -17,7 +17,7 @@ execute 'do_reboot' do
 end
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
   directory '/etc/audisp' do
-    action :create_if_missing
+    action :create
   end
   
   file '/etc/audisp/audisp-remote.conf' do
