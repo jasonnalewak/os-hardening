@@ -23,7 +23,7 @@ if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_
     action :create
   end
 end
-  
+
   file '/etc/audisp/audisp-remote.conf' do
     action :create_if_missing
   end
