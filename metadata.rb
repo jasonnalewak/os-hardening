@@ -1,4 +1,4 @@
-name 'hardening'  # ~FC078
+name 'hardening' # ~FC078
 maintainer 'Jason Nalewak'
 maintainer_email 'jnalewak@chef.io'
 license 'Proprietary - All Rights Reserved'
