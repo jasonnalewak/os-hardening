@@ -14,7 +14,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: rhel-7
+  - name: redhat-7
 
 suites:
   - name: default
