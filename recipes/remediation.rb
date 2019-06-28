@@ -26,7 +26,7 @@ if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_
 end
 
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
-  directory '/etc/audisp' do # added to make cookbook work
+  directory '/etc/audisp/plugin.d' do # added to make cookbook work
     action :create
   end
 end
