@@ -1,0 +1,609 @@
+I, [2019-07-01T13:22:16.471819 #42775]  INFO -- default-centos-7: -----> Converging <default-centos-7>...
+I, [2019-07-01T13:22:16.472908 #42775]  INFO -- default-centos-7: Preparing files for transfer
+I, [2019-07-01T13:22:16.473027 #42775]  INFO -- default-centos-7: Preparing dna.json
+I, [2019-07-01T13:22:16.473902 #42775]  INFO -- default-centos-7: Resolving cookbook dependencies with Berkshelf 7.0.7...
+I, [2019-07-01T13:22:17.831531 #42775]  INFO -- default-centos-7: Removing non-cookbook files before transfer
+I, [2019-07-01T13:22:17.844397 #42775]  INFO -- default-centos-7: Preparing validation.pem
+I, [2019-07-01T13:22:17.846543 #42775]  INFO -- default-centos-7: Preparing client.rb
+I, [2019-07-01T13:22:17.991175 #42775]  INFO -- default-centos-7: chef installation detected
+I, [2019-07-01T13:22:17.991250 #42775]  INFO -- default-centos-7: install_strategy set to 'once'
+I, [2019-07-01T13:22:17.991279 #42775]  INFO -- default-centos-7: Nothing to install
+I, [2019-07-01T13:22:18.047772 #42775]  INFO -- default-centos-7: Transferring files to <default-centos-7>
+I, [2019-07-01T13:22:20.113449 #42775]  INFO -- default-centos-7: Starting Chef Client, version 14.0.202
+I, [2019-07-01T13:22:20.734862 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:51+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2019-07-01T13:22:21.247399 #42775]  INFO -- default-centos-7: resolving cookbooks for run list: ["hardening::default"]
+I, [2019-07-01T13:22:21.679702 #42775]  INFO -- default-centos-7: Synchronizing Cookbooks:
+I, [2019-07-01T13:22:21.689114 #42775]  INFO -- default-centos-7:   - hardening (0.1.0)
+I, [2019-07-01T13:22:21.707458 #42775]  INFO -- default-centos-7:   - windows-hardening (0.9.1)
+I, [2019-07-01T13:22:21.708536 #42775]  INFO -- default-centos-7:   - puppet_compat (1.1.4)
+I, [2019-07-01T13:22:21.708840 #42775]  INFO -- default-centos-7:   - os-hardening (4.0.0)
+I, [2019-07-01T13:22:21.710291 #42775]  INFO -- default-centos-7:   - windows-security-policy (0.3.9)
+I, [2019-07-01T13:22:21.711656 #42775]  INFO -- default-centos-7: Installing Cookbook Gems:
+I, [2019-07-01T13:22:21.734389 #42775]  INFO -- default-centos-7: Compiling Cookbooks...
+I, [2019-07-01T13:22:21.981651 #42775]  INFO -- default-centos-7: Converging 262 resources
+I, [2019-07-01T13:22:21.986539 #42775]  INFO -- default-centos-7: Recipe: os-hardening::yum
+I, [2019-07-01T13:22:21.987737 #42775]  INFO -- default-centos-7:   * ruby_block[check package signature in repo files] action run
+I, [2019-07-01T13:22:21.987822 #42775]  INFO -- default-centos-7:     - execute the ruby block check package signature in repo files
+I, [2019-07-01T13:22:21.990133 #42775]  INFO -- default-centos-7:   * yum_repository[CentOS-Debuginfo] action remove
+I, [2019-07-01T13:22:22.626680 #42775]  INFO -- default-centos-7:     * execute[yum clean all CentOS-Debuginfo] action run (skipped due to only_if)
+I, [2019-07-01T13:22:22.630528 #42775]  INFO -- default-centos-7:     * file[/etc/yum.repos.d/CentOS-Debuginfo.repo] action delete (up to date)
+I, [2019-07-01T13:22:22.631947 #42775]  INFO -- default-centos-7:     * ruby_block[package-cache-reload-CentOS-Debuginfo] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:22.632541 #42775]  INFO -- default-centos-7:      (up to date)
+I, [2019-07-01T13:22:22.636077 #42775]  INFO -- default-centos-7:   * yum_repository[CentOS-Media] action remove
+I, [2019-07-01T13:22:23.053671 #42775]  INFO -- default-centos-7:     * execute[yum clean all CentOS-Media] action run (skipped due to only_if)
+I, [2019-07-01T13:22:23.058689 #42775]  INFO -- default-centos-7:     * file[/etc/yum.repos.d/CentOS-Media.repo] action delete (up to date)
+I, [2019-07-01T13:22:23.061280 #42775]  INFO -- default-centos-7:     * ruby_block[package-cache-reload-CentOS-Media] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:23.063386 #42775]  INFO -- default-centos-7:      (up to date)
+I, [2019-07-01T13:22:23.066826 #42775]  INFO -- default-centos-7:   * yum_repository[CentOS-Vault] action remove
+I, [2019-07-01T13:22:23.461605 #42775]  INFO -- default-centos-7:     * execute[yum clean all CentOS-Vault] action run (skipped due to only_if)
+I, [2019-07-01T13:22:23.463384 #42775]  INFO -- default-centos-7:     * file[/etc/yum.repos.d/CentOS-Vault.repo] action delete (up to date)
+I, [2019-07-01T13:22:23.464006 #42775]  INFO -- default-centos-7:     * ruby_block[package-cache-reload-CentOS-Vault] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:23.464082 #42775]  INFO -- default-centos-7:      (up to date)
+I, [2019-07-01T13:22:24.617174 #42775]  INFO -- default-centos-7:   * yum_package[xinetd] action purge (up to date)
+I, [2019-07-01T13:22:24.622900 #42775]  INFO -- default-centos-7:   * yum_package[inetd] action purge (up to date)
+I, [2019-07-01T13:22:24.692213 #42775]  INFO -- default-centos-7:   * yum_package[ypserv] action purge (up to date)
+I, [2019-07-01T13:22:24.709729 #42775]  INFO -- default-centos-7:   * yum_package[telnet-server] action purge (up to date)
+I, [2019-07-01T13:22:24.796267 #42775]  INFO -- default-centos-7:   * yum_package[rsh-server] action purge (up to date)
+I, [2019-07-01T13:22:24.797241 #42775]  INFO -- default-centos-7: Recipe: os-hardening::limits
+I, [2019-07-01T13:22:24.804852 #42775]  INFO -- default-centos-7:   * directory[/etc/security/limits.d] action create (up to date)
+I, [2019-07-01T13:22:24.824088 #42775]  INFO -- default-centos-7:   * template[/etc/security/limits.d/10.hardcore.conf] action create (up to date)
+I, [2019-07-01T13:22:24.825942 #42775]  INFO -- default-centos-7: Recipe: os-hardening::login_defs
+I, [2019-07-01T13:22:24.845028 #42775]  INFO -- default-centos-7:   * template[/etc/login.defs] action create
+I, [2019-07-01T13:22:24.846274 #42775]  INFO -- default-centos-7:     - update content in file /etc/login.defs from 48d599 to 164eab
+I, [2019-07-01T13:22:24.849004 #42775]  INFO -- default-centos-7:     --- /etc/login.defs	2019-07-01 17:18:46.814810968 +0000
+I, [2019-07-01T13:22:24.862539 #42775]  INFO -- default-centos-7:     +++ /etc/.chef-login20190701-3838-12zelav.defs	2019-07-01 17:22:55.657208450 +0000
+I, [2019-07-01T13:22:24.863222 #42775]  INFO -- default-centos-7:     @@ -90,7 +90,7 @@
+I, [2019-07-01T13:22:24.863469 #42775]  INFO -- default-centos-7:      # Prefix these values with `0` to get octal, `0x` to get hexadecimal.
+I, [2019-07-01T13:22:24.863949 #42775]  INFO -- default-centos-7:      # `022` is the "historical" value in Debian for UMASK
+I, [2019-07-01T13:22:24.864199 #42775]  INFO -- default-centos-7:      # `027`, or even `077`, could be considered better for privacy.
+I, [2019-07-01T13:22:24.864555 #42775]  INFO -- default-centos-7:     -UMASK 077
+I, [2019-07-01T13:22:24.881210 #42775]  INFO -- default-centos-7:     +UMASK   077
+I, [2019-07-01T13:22:24.882151 #42775]  INFO -- default-centos-7:      
+I, [2019-07-01T13:22:24.884366 #42775]  INFO -- default-centos-7:      # Enable setting of the umask group bits to be the same as owner bits (examples: `022` -> `002`, `077` -> `007`) for non-root users, if the uid is the same as gid, and username is the same as the primary group name.
+I, [2019-07-01T13:22:24.884853 #42775]  INFO -- default-centos-7:      # If set to yes, userdel will remove the user's group if it contains no more members, and useradd will create by default a group with the name of the user.
+I, [2019-07-01T13:22:24.884919 #42775]  INFO -- default-centos-7:     @@ -104,7 +104,7 @@
+I, [2019-07-01T13:22:24.884968 #42775]  INFO -- default-centos-7:      PASS_MAX_DAYS 60
+I, [2019-07-01T13:22:24.885014 #42775]  INFO -- default-centos-7:      
+I, [2019-07-01T13:22:24.885237 #42775]  INFO -- default-centos-7:      # Minimum number of days allowed between password changes.
+I, [2019-07-01T13:22:24.885526 #42775]  INFO -- default-centos-7:     -PASS_MIN_DAYS 1
+I, [2019-07-01T13:22:24.885580 #42775]  INFO -- default-centos-7:     +PASS_MIN_DAYS 7
+I, [2019-07-01T13:22:24.885752 #42775]  INFO -- default-centos-7:      
+I, [2019-07-01T13:22:24.885804 #42775]  INFO -- default-centos-7:      # Number of days warning given before a password expires.
+I, [2019-07-01T13:22:24.885852 #42775]  INFO -- default-centos-7:      PASS_WARN_AGE	7
+I, [2019-07-01T13:22:24.887210 #42775]  INFO -- default-centos-7:     @@ -210,6 +210,4 @@
+I, [2019-07-01T13:22:24.887652 #42775]  INFO -- default-centos-7:      # This variable is deprecated. You should use ENCRYPT_METHOD.
+I, [2019-07-01T13:22:24.887728 #42775]  INFO -- default-centos-7:      #
+I, [2019-07-01T13:22:24.888113 #42775]  INFO -- default-centos-7:      #MD5_CRYPT_ENAB no
+I, [2019-07-01T13:22:24.888383 #42775]  INFO -- default-centos-7:     -FAIL_DELAY 4
+I, [2019-07-01T13:22:24.891087 #42775]  INFO -- default-centos-7:     -CREATE_HOME yes
+I, [2019-07-01T13:22:24.891232 #42775]  INFO -- default-centos-7: Recipe: os-hardening::minimize_access
+I, [2019-07-01T13:22:24.931892 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /usr/local/sbin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:24.967057 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /usr/local/bin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:24.993796 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /usr/sbin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:25.018393 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /usr/bin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:25.049342 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /sbin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:25.080614 #42775]  INFO -- default-centos-7:   * execute[remove write permission from /bin] action run (skipped due to not_if)
+I, [2019-07-01T13:22:25.086015 #42775]  INFO -- default-centos-7:   * file[/etc/shadow] action create (up to date)
+I, [2019-07-01T13:22:25.092126 #42775]  INFO -- default-centos-7:   * file[/bin/su] action create (up to date)
+I, [2019-07-01T13:22:25.097346 #42775]  INFO -- default-centos-7:   * directory[/var/log] action create (up to date)
+I, [2019-07-01T13:22:25.097901 #42775]  INFO -- default-centos-7: Recipe: os-hardening::pam
+I, [2019-07-01T13:22:25.105155 #42775]  INFO -- default-centos-7:   * yum_package[pam-ccreds] action remove (up to date)
+I, [2019-07-01T13:22:25.111707 #42775]  INFO -- default-centos-7:   * yum_package[pam_pwquality] action install (up to date)
+I, [2019-07-01T13:22:25.130569 #42775]  INFO -- default-centos-7:   * template[/etc/pam.d/system-auth-ac] action create (up to date)
+I, [2019-07-01T13:22:25.147598 #42775]  INFO -- default-centos-7:   * template[/etc/libuser.conf] action create (up to date)
+I, [2019-07-01T13:22:25.148036 #42775]  INFO -- default-centos-7: Recipe: os-hardening::profile
+I, [2019-07-01T13:22:25.161095 #42775]  INFO -- default-centos-7:   * template[/etc/profile.d/pinerolo_profile.sh] action create (up to date)
+I, [2019-07-01T13:22:25.161996 #42775]  INFO -- default-centos-7: Recipe: os-hardening::securetty
+I, [2019-07-01T13:22:25.172113 #42775]  INFO -- default-centos-7:   * template[/etc/securetty] action create (up to date)
+I, [2019-07-01T13:22:25.176744 #42775]  INFO -- default-centos-7: Recipe: os-hardening::suid_sgid
+I, [2019-07-01T13:22:25.197657 #42775]  INFO -- default-centos-7:   * ruby_block[remove_suid_from_blacklists] action run
+I, [2019-07-01T13:22:25.198586 #42775]  INFO -- default-centos-7:     - execute the ruby block remove_suid_from_blacklists
+I, [2019-07-01T13:22:25.200726 #42775]  INFO -- default-centos-7:   * ruby_block[remove_suid_from_unknown] action run (skipped due to only_if)
+I, [2019-07-01T13:22:25.201596 #42775]  INFO -- default-centos-7: Recipe: hardening::remediation
+I, [2019-07-01T13:22:25.203542 #42775]  INFO -- default-centos-7:   * execute[dconf_update] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:25.206328 #42775]  INFO -- default-centos-7:   * service[ssh_restart] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:25.209274 #42775]  INFO -- default-centos-7:   * execute[auditd_restart] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:25.212228 #42775]  INFO -- default-centos-7:   * execute[do_reboot] action nothing (skipped due to action :nothing)
+I, [2019-07-01T13:22:25.216896 #42775]  INFO -- default-centos-7:   * directory[/etc/audisp] action create (up to date)
+I, [2019-07-01T13:22:25.222431 #42775]  INFO -- default-centos-7:   * directory[/etc/audisp/plugins.d] action create (up to date)
+I, [2019-07-01T13:22:25.228016 #42775]  INFO -- default-centos-7:   * file[/etc/audisp/audisp-remote.conf] action create_if_missing (up to date)
+I, [2019-07-01T13:22:25.231012 #42775]  INFO -- default-centos-7:   * file[/etc/audisp/plugins.d/au-remote.conf] action create_if_missing (up to date)
+I, [2019-07-01T13:22:25.233358 #42775]  INFO -- default-centos-7:   * file[/etc/modprobe.d/blacklist.conf] action create_if_missing (up to date)
+I, [2019-07-01T13:22:25.285981 #42775]  INFO -- default-centos-7:   * file[/etc/dconf/db/local.d/01-banner-message] action create_if_missing (skipped due to only_if)
+I, [2019-07-01T13:22:25.345661 #42775]  INFO -- default-centos-7:   * file[/etc/dconf/db/local.d/00-screensaver] action create_if_missing (skipped due to only_if)
+I, [2019-07-01T13:22:25.404919 #42775]  INFO -- default-centos-7:   * file[/etc/dconf/db/local.d/locks/session] action create_if_missing (skipped due to only_if)
+I, [2019-07-01T13:22:25.477681 #42775]  INFO -- default-centos-7:   * file[/etc/dconf/db/local.d/00-disable-CAD] action create_if_missing (skipped due to only_if)
+I, [2019-07-01T13:22:25.548177 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_01_banner_message_86485] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:25.554620 #42775]  INFO -- default-centos-7:   * file[_etc_issue_86487] action create (up to date)
+I, [2019-07-01T13:22:25.607348 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_00_screensaver_86515] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:25.674689 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_00_screensaver_86517] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:25.734672 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_00_screensaver_86523] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:25.795809 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_00_screensaver_86525] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:25.801683 #42775]  INFO -- default-centos-7:   * yum_package[screen_86521] action install (up to date)
+I, [2019-07-01T13:22:25.806341 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86527] action ensure (up to date)
+I, [2019-07-01T13:22:25.811955 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86529] action ensure (up to date)
+I, [2019-07-01T13:22:25.817439 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86531] action ensure (up to date)
+I, [2019-07-01T13:22:25.823862 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86533] action ensure (up to date)
+I, [2019-07-01T13:22:25.829624 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86535] action ensure (up to date)
+I, [2019-07-01T13:22:25.834140 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86537] action ensure (up to date)
+I, [2019-07-01T13:22:25.838833 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86539] action ensure (up to date)
+I, [2019-07-01T13:22:25.843665 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86541] action ensure (up to date)
+I, [2019-07-01T13:22:25.848854 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_pwquality_conf_86559] action ensure (up to date)
+I, [2019-07-01T13:22:25.863985 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86545] action ensure (up to date)
+I, [2019-07-01T13:22:25.874489 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86549] action ensure
+I, [2019-07-01T13:22:25.875480 #42775]  INFO -- default-centos-7:     - File_line adds line 'PASS_MIN_DAYS 1'
+I, [2019-07-01T13:22:25.891803 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86553] action ensure (up to date)
+I, [2019-07-01T13:22:25.911924 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86575] action ensure
+I, [2019-07-01T13:22:25.912881 #42775]  INFO -- default-centos-7:     - File_line adds line 'FAIL_DELAY 4'
+I, [2019-07-01T13:22:25.921650 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86619] action ensure
+I, [2019-07-01T13:22:25.922247 #42775]  INFO -- default-centos-7:     - File_line adds line 'UMASK 077'
+I, [2019-07-01T13:22:25.947971 #42775]  INFO -- default-centos-7:   * file_line[_etc_login_defs_86637] action ensure
+I, [2019-07-01T13:22:25.948504 #42775]  INFO -- default-centos-7:     - File_line adds line 'CREATE_HOME yes'
+I, [2019-07-01T13:22:25.952875 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_libuser_conf_86547] action ensure (up to date)
+I, [2019-07-01T13:22:26.008708 #42775]  INFO -- default-centos-7:   * file_line[PermitEmptyPasswords_86563] action ensure (up to date)
+I, [2019-07-01T13:22:26.011272 #42775]  INFO -- default-centos-7:   * file_line[_etc_default_useradd_86565] action ensure (up to date)
+I, [2019-07-01T13:22:26.078249 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_gdm_custom_conf_86577] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:26.140196 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_gdm_custom_conf_86579] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:26.210667 #42775]  INFO -- default-centos-7:   * file_line[PermitUserEnvironment_86581] action ensure (up to date)
+I, [2019-07-01T13:22:26.264729 #42775]  INFO -- default-centos-7:   * file_line[HostbasedAuthentication_86583] action ensure (up to date)
+I, [2019-07-01T13:22:26.268124 #42775]  INFO -- default-centos-7:   * yum_package[rsh_server_86591] action remove (up to date)
+I, [2019-07-01T13:22:26.272525 #42775]  INFO -- default-centos-7:   * yum_package[ypserv_86593] action remove (up to date)
+I, [2019-07-01T13:22:26.275895 #42775]  INFO -- default-centos-7:   * directory[/etc/cron.daily] action create (up to date)
+I, [2019-07-01T13:22:26.288689 #42775]  INFO -- default-centos-7:   * yum_package[aide_86597] action install (up to date)
+I, [2019-07-01T13:22:26.297131 #42775]  INFO -- default-centos-7:   * file[_etc_cron_daily_aide_86597] action create
+I, [2019-07-01T13:22:26.322603 #42775]  INFO -- default-centos-7:     - change mode from '0755' to '0700'
+I, [2019-07-01T13:22:26.323697 #42775]  INFO -- default-centos-7:   * yum_package[aide_86597] action install (up to date)
+I, [2019-07-01T13:22:26.336317 #42775]  INFO -- default-centos-7:   * file[_etc_cron_daily_aide_notify_86599] action create
+I, [2019-07-01T13:22:26.336554 #42775]  INFO -- default-centos-7:     - Would change mode from '0700' to '0755'
+I, [2019-07-01T13:22:26.353062 #42775]  INFO -- default-centos-7:   * yum_package[aide_notify_86599] action install (up to date)
+I, [2019-07-01T13:22:26.361632 #42775]  INFO -- default-centos-7:   * file[_etc_cron_daily_aide_notify_86599] action create
+I, [2019-07-01T13:22:26.365037 #42775]  INFO -- default-centos-7:     - change mode from '0700' to '0755'
+I, [2019-07-01T13:22:26.369186 #42775]  INFO -- default-centos-7:   * yum_package[aide_notify_86599] action install (up to date)
+I, [2019-07-01T13:22:26.372050 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_yum_conf_86601] action ensure (up to date)
+I, [2019-07-01T13:22:26.374839 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_yum_conf_86603] action ensure (up to date)
+I, [2019-07-01T13:22:26.377647 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_yum_conf_86611] action ensure (up to date)
+I, [2019-07-01T13:22:26.380235 #42775]  INFO -- default-centos-7:   * file_line[_etc_modprobe_d_blacklist_conf_86607] action ensure (up to date)
+I, [2019-07-01T13:22:26.425593 #42775]  INFO -- default-centos-7:   * service[autofs_disable_86609] action disable (up to date)
+I, [2019-07-01T13:22:26.465532 #42775]  INFO -- default-centos-7:   * service[autofs_stop_86609] action stop (up to date)
+I, [2019-07-01T13:22:26.468781 #42775]  INFO -- default-centos-7:   * file[/etc/selinux/config] action create_if_missing (up to date)
+I, [2019-07-01T13:22:26.470533 #42775]  INFO -- default-centos-7:   * file_line[_etc_selinux_config_86613] action ensure (up to date)
+I, [2019-07-01T13:22:26.472657 #42775]  INFO -- default-centos-7:   * file_line[_etc_selinux_config_86615] action ensure (up to date)
+I, [2019-07-01T13:22:26.519557 #42775]  INFO -- default-centos-7:   * execute[systemctl_mask_ctrl_alt_del_target_86617] action run
+I, [2019-07-01T13:22:26.520506 #42775]  INFO -- default-centos-7:     - execute systemctl mask ctrl-alt-del.target
+I, [2019-07-01T13:22:26.577675 #42775]  INFO -- default-centos-7:   * ini_setting[_etc_dconf_db_local_d_00_disable_CAD_86617] action ensure (skipped due to only_if)
+I, [2019-07-01T13:22:26.582359 #42775]  INFO -- default-centos-7:   * file[/etc/rsyslog.conf] action create_if_missing (up to date)
+I, [2019-07-01T13:22:26.583984 #42775]  INFO -- default-centos-7:   * file_line[_etc_rsyslog_conf_86675] action ensure (up to date)
+I, [2019-07-01T13:22:26.612951 #42775]  INFO -- default-centos-7:   * file[_etc_cron_allow_86677] action create (skipped due to only_if)
+I, [2019-07-01T13:22:26.643880 #42775]  INFO -- default-centos-7:   * file[_etc_cron_allow_86679] action create (skipped due to only_if)
+I, [2019-07-01T13:22:26.682260 #42775]  INFO -- default-centos-7:   * service[kdump_disable_86681] action disable (up to date)
+I, [2019-07-01T13:22:26.712712 #42775]  INFO -- default-centos-7:   * service[kdump_stop_86681] action stop (up to date)
+I, [2019-07-01T13:22:26.717235 #42775]  INFO -- default-centos-7:   * yum_package[telnet_server_86701] action remove (up to date)
+I, [2019-07-01T13:22:26.720049 #42775]  INFO -- default-centos-7:   * directory[etc/audit] action create (up to date)
+I, [2019-07-01T13:22:26.722253 #42775]  INFO -- default-centos-7:   * directory[/etc/audit/rules.d] action create (up to date)
+I, [2019-07-01T13:22:26.724688 #42775]  INFO -- default-centos-7:   * file[/etc/audit/rules.d/audit.rules] action create_if_missing (up to date)
+I, [2019-07-01T13:22:26.728001 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_critical_error_86705] action ensure (up to date)
+I, [2019-07-01T13:22:26.730806 #42775]  INFO -- default-centos-7:   * file_line[_etc_audisp_audisp_remote_conf_86709] action ensure (up to date)
+I, [2019-07-01T13:22:26.732425 #42775]  INFO -- default-centos-7:   * file_line[_etc_audisp_audisp_remote_conf_86711] action ensure (up to date)
+I, [2019-07-01T13:22:26.737025 #42775]  INFO -- default-centos-7:   * file_line[_etc_audisp_audisp_remote_conf_87815] action ensure (up to date)
+I, [2019-07-01T13:22:26.742692 #42775]  INFO -- default-centos-7:   * file[/etc/audit/auditd.conf] action create_if_missing
+I, [2019-07-01T13:22:26.744682 #42775]  INFO -- default-centos-7:     - create new file /etc/audit/auditd.conf
+I, [2019-07-01T13:22:26.747367 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_auditd_conf_86715] action ensure
+I, [2019-07-01T13:22:26.748362 #42775]  INFO -- default-centos-7:     - File_line adds line 'space_left_action = email'
+I, [2019-07-01T13:22:26.749895 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_auditd_conf_86717] action ensure
+I, [2019-07-01T13:22:26.752765 #42775]  INFO -- default-centos-7:     - File_line adds line 'action_mail_acct = root'
+I, [2019-07-01T13:22:26.757370 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_euid_b32_86719] action ensure
+I, [2019-07-01T13:22:26.760015 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S execve -C uid!=euid -F euid=0 -k setuid'
+I, [2019-07-01T13:22:26.762391 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_euid_b64_86719] action ensure
+I, [2019-07-01T13:22:26.763419 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -k setuid'
+I, [2019-07-01T13:22:26.765049 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_egid_b32_86719] action ensure
+I, [2019-07-01T13:22:26.765781 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S execve -C gid!=egid -F egid=0 -k setgid'
+I, [2019-07-01T13:22:26.767807 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_egid_b64_86719] action ensure
+I, [2019-07-01T13:22:26.768442 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -k setgid'
+I, [2019-07-01T13:22:26.770719 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86721] action ensure
+I, [2019-07-01T13:22:26.771277 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.773274 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86723] action ensure
+I, [2019-07-01T13:22:26.774066 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fchown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.778055 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86725] action ensure
+I, [2019-07-01T13:22:26.779953 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S lchown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.782718 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86727] action ensure
+I, [2019-07-01T13:22:26.784307 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fchownat -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.788345 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86729] action ensure
+I, [2019-07-01T13:22:26.789581 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S chmod -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.793886 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86731] action ensure
+I, [2019-07-01T13:22:26.794981 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fchmod -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.797259 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86733] action ensure
+I, [2019-07-01T13:22:26.797867 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fchmodat -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.801180 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86735] action ensure
+I, [2019-07-01T13:22:26.802078 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S setxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.804410 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86737] action ensure
+I, [2019-07-01T13:22:26.805178 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fsetxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.807423 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86739] action ensure
+I, [2019-07-01T13:22:26.809076 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S lsetxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.814265 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86741] action ensure
+I, [2019-07-01T13:22:26.814821 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S removexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.816133 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86743] action ensure
+I, [2019-07-01T13:22:26.817303 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S fremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.822995 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86745] action ensure
+I, [2019-07-01T13:22:26.825649 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S lremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.828927 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86811] action ensure
+I, [2019-07-01T13:22:26.829685 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S init_module -k module-change'
+I, [2019-07-01T13:22:26.831937 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86813] action ensure
+I, [2019-07-01T13:22:26.832867 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S delete_module -k module-change'
+I, [2019-07-01T13:22:26.835545 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86823] action ensure
+I, [2019-07-01T13:22:26.836155 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S rename -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.838762 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86825] action ensure
+I, [2019-07-01T13:22:26.839155 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S renameat -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.842105 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86827] action ensure
+I, [2019-07-01T13:22:26.843176 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S rmdir -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.845771 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86829] action ensure
+I, [2019-07-01T13:22:26.846966 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S unlink -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.848534 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b32_86831] action ensure
+I, [2019-07-01T13:22:26.849476 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S unlinkat -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.855456 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86721] action ensure
+I, [2019-07-01T13:22:26.856806 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.861019 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86723] action ensure
+I, [2019-07-01T13:22:26.861733 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fchown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.864327 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86725] action ensure
+I, [2019-07-01T13:22:26.864971 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S lchown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.867603 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86727] action ensure
+I, [2019-07-01T13:22:26.868041 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fchownat -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.870873 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86729] action ensure
+I, [2019-07-01T13:22:26.873023 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S chmod -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.874470 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86731] action ensure
+I, [2019-07-01T13:22:26.875492 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fchmod -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.878187 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86733] action ensure
+I, [2019-07-01T13:22:26.878746 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fchmodat -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.882623 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86735] action ensure
+I, [2019-07-01T13:22:26.883748 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S setxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.889675 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86737] action ensure
+I, [2019-07-01T13:22:26.890780 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fsetxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.897026 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86739] action ensure
+I, [2019-07-01T13:22:26.897881 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S lsetxattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.900853 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86741] action ensure
+I, [2019-07-01T13:22:26.901406 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S removexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.903690 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86743] action ensure
+I, [2019-07-01T13:22:26.904492 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S fremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.906606 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86745] action ensure
+I, [2019-07-01T13:22:26.907208 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S lremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+I, [2019-07-01T13:22:26.910336 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86811] action ensure
+I, [2019-07-01T13:22:26.911530 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S init_module -k module-change'
+I, [2019-07-01T13:22:26.914156 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86813] action ensure
+I, [2019-07-01T13:22:26.914791 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S delete_module -k module-change'
+I, [2019-07-01T13:22:26.919322 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86823] action ensure
+I, [2019-07-01T13:22:26.920288 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S rename -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.926356 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86825] action ensure
+I, [2019-07-01T13:22:26.926872 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S renameat -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.930916 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86827] action ensure
+I, [2019-07-01T13:22:26.931239 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S rmdir -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.935022 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86829] action ensure
+I, [2019-07-01T13:22:26.935285 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S unlink -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.938768 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_b64_86831] action ensure
+I, [2019-07-01T13:22:26.938842 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S unlinkat -F auid>=1000 -F auid!=4294967295 -k delete'
+I, [2019-07-01T13:22:26.944923 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86747] action ensure
+I, [2019-07-01T13:22:26.946328 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S creat -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.949025 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86749] action ensure
+I, [2019-07-01T13:22:26.949583 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S open -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.954766 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86751] action ensure
+I, [2019-07-01T13:22:26.954861 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S openat -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.959976 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86753] action ensure
+I, [2019-07-01T13:22:26.960532 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S open_by_handle_at -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.962979 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86755] action ensure
+I, [2019-07-01T13:22:26.963115 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S truncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.965601 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b32_86757] action ensure
+I, [2019-07-01T13:22:26.965714 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.967786 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86747] action ensure
+I, [2019-07-01T13:22:26.968245 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S creat -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.970827 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86749] action ensure
+I, [2019-07-01T13:22:26.970883 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S open -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.973476 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86751] action ensure
+I, [2019-07-01T13:22:26.973888 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S openat -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.976793 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86753] action ensure
+I, [2019-07-01T13:22:26.979115 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S open_by_handle_at -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.982161 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86755] action ensure
+I, [2019-07-01T13:22:26.982552 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S truncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.986917 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EPERM_b64_86757] action ensure
+I, [2019-07-01T13:22:26.987551 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.993160 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86747] action ensure
+I, [2019-07-01T13:22:26.993247 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S creat -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.995417 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86749] action ensure
+I, [2019-07-01T13:22:26.995854 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S open -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:26.998290 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86751] action ensure
+I, [2019-07-01T13:22:26.998713 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S openat -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.001557 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86753] action ensure
+I, [2019-07-01T13:22:27.001849 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S open_by_handle_at -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.004531 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86755] action ensure
+I, [2019-07-01T13:22:27.004586 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S truncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.007741 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b32_86757] action ensure
+I, [2019-07-01T13:22:27.008117 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.014241 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86747] action ensure
+I, [2019-07-01T13:22:27.015068 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S creat -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.020163 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86749] action ensure
+I, [2019-07-01T13:22:27.021453 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S open -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.026131 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86751] action ensure
+I, [2019-07-01T13:22:27.026312 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S openat -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.028862 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86753] action ensure
+I, [2019-07-01T13:22:27.028915 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S open_by_handle_at -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.031807 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86755] action ensure
+I, [2019-07-01T13:22:27.031864 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S truncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.034839 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_EACCES_b64_86757] action ensure
+I, [2019-07-01T13:22:27.035173 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access'
+I, [2019-07-01T13:22:27.037919 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86759] action ensure
+I, [2019-07-01T13:22:27.038111 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/semanage -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.040399 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86761] action ensure
+I, [2019-07-01T13:22:27.041337 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/setsebool -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.048689 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86763] action ensure
+I, [2019-07-01T13:22:27.049053 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/chcon -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.062203 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86765] action ensure
+I, [2019-07-01T13:22:27.062594 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/setfiles -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.070620 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86769] action ensure
+I, [2019-07-01T13:22:27.071234 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /var/run/faillock -p wa -k logins'
+I, [2019-07-01T13:22:27.078627 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86771] action ensure
+I, [2019-07-01T13:22:27.078933 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /var/log/lastlog -p wa -k logins'
+I, [2019-07-01T13:22:27.083365 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86773] action ensure
+I, [2019-07-01T13:22:27.084244 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/passwd -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged-passwd'
+I, [2019-07-01T13:22:27.095016 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86775] action ensure
+I, [2019-07-01T13:22:27.095125 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/unix_chkpwd -F auid>=1000 -F auid!=4294967295 -k privileged-passwd'
+I, [2019-07-01T13:22:27.098509 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86777] action ensure
+I, [2019-07-01T13:22:27.098566 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/gpasswd -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged-passwd'
+I, [2019-07-01T13:22:27.101973 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86779] action ensure
+I, [2019-07-01T13:22:27.102488 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/chage -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged-passwd'
+I, [2019-07-01T13:22:27.105270 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86781] action ensure
+I, [2019-07-01T13:22:27.106089 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/userhelper -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged-passwd'
+I, [2019-07-01T13:22:27.109494 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86783] action ensure
+I, [2019-07-01T13:22:27.109571 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/su -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.113684 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86785] action ensure
+I, [2019-07-01T13:22:27.114215 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/sudo -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.118722 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86789] action ensure
+I, [2019-07-01T13:22:27.119064 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/newgrp -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.126387 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86791] action ensure
+I, [2019-07-01T13:22:27.126835 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/chsh -F auid>=1000 -F auid!=4294967295 -k privileged-priv_change'
+I, [2019-07-01T13:22:27.130032 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86797] action ensure
+I, [2019-07-01T13:22:27.130521 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/bin/umount -F auid>=1000 -F auid!=4294967295 -k privileged-mount'
+I, [2019-07-01T13:22:27.134746 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86799] action ensure
+I, [2019-07-01T13:22:27.134801 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/postdrop -F auid>=1000 -F auid!=4294967295 -k privileged-postfix'
+I, [2019-07-01T13:22:27.138097 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86801] action ensure
+I, [2019-07-01T13:22:27.138576 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/postqueue -F auid>=1000 -F auid!=4294967295 -k privileged-postfix'
+I, [2019-07-01T13:22:27.142079 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86803] action ensure
+I, [2019-07-01T13:22:27.142337 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/libexec/openssh/ssh-keysign -F auid>=1000 -F auid!=4294967295 -k privileged-ssh'
+I, [2019-07-01T13:22:27.146604 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86807] action ensure
+I, [2019-07-01T13:22:27.147465 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/crontab -F auid>=1000 -F auid!=4294967295 -k privileged-cron'
+I, [2019-07-01T13:22:27.151784 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86809] action ensure
+I, [2019-07-01T13:22:27.153030 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/sbin/pam_timestamp_check -F auid>=1000 -F auid!=4294967295 -k privileged-pam'
+I, [2019-07-01T13:22:27.159439 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86815] action ensure
+I, [2019-07-01T13:22:27.159873 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /usr/bin/kmod -p x -F auid!=4294967295 -k module-change'
+I, [2019-07-01T13:22:27.163126 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_86821] action ensure
+I, [2019-07-01T13:22:27.163805 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /etc/passwd -p wa -k identity'
+I, [2019-07-01T13:22:27.167532 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_sudoers_86787] action ensure
+I, [2019-07-01T13:22:27.168022 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /etc/sudoers -p wa -k privileged-actions'
+I, [2019-07-01T13:22:27.170741 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_sudoers_d_86787] action ensure
+I, [2019-07-01T13:22:27.170810 #42775]  INFO -- default-centos-7:     - File_line adds line '-w /etc/sudoers.d/ -p wa -k privileged-actions'
+I, [2019-07-01T13:22:27.173869 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_mount_b32_86795] action ensure
+I, [2019-07-01T13:22:27.174306 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b32 -S mount -F auid>=1000 -F auid!=4294967295 -k privileged-mount'
+I, [2019-07-01T13:22:27.179999 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules_mount_b64_86795] action ensure
+I, [2019-07-01T13:22:27.180458 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F arch=b64 -S mount -F auid>=1000 -F auid!=4294967295 -k privileged-mount'
+I, [2019-07-01T13:22:27.190058 #42775]  INFO -- default-centos-7:   * file_line[_etc_audit_rules_d_audit_rules__usr_bin_mount_86795] action ensure
+I, [2019-07-01T13:22:27.190915 #42775]  INFO -- default-centos-7:     - File_line adds line '-a always,exit -F path=/usr/bin/mount -F auid>=1000 -F auid!=4294967295 -k privileged-mount'
+I, [2019-07-01T13:22:27.198064 #42775]  INFO -- default-centos-7:   * file_line[_etc_security_limits_conf_86841] action ensure
+I, [2019-07-01T13:22:27.199163 #42775]  INFO -- default-centos-7:     - File_line adds line '* hard maxlogins 10'
+I, [2019-07-01T13:22:27.265895 #42775]  INFO -- default-centos-7:   * file_line[Ciphers_86845] action ensure
+I, [2019-07-01T13:22:27.266100 #42775]  INFO -- default-centos-7:     - File_line adds line 'Ciphers aes128-ctr,aes192-ctr,aes256-ctr'
+I, [2019-07-01T13:22:27.268711 #42775]  INFO -- default-centos-7:   * file[_etc_profile_d_tmout_sh_86847] action create
+I, [2019-07-01T13:22:27.270997 #42775]  INFO -- default-centos-7:     - create new file /etc/profile.d/tmout.sh
+I, [2019-07-01T13:22:27.271059 #42775]  INFO -- default-centos-7:     - update content in file /etc/profile.d/tmout.sh from none to 36ea6f
+I, [2019-07-01T13:22:27.271089 #42775]  INFO -- default-centos-7:     --- /etc/profile.d/tmout.sh	2019-07-01 17:22:58.096015377 +0000
+I, [2019-07-01T13:22:27.271113 #42775]  INFO -- default-centos-7:     +++ /etc/profile.d/.chef-tmout20190701-3838-z52ip.sh	2019-07-01 17:22:58.096015377 +0000
+I, [2019-07-01T13:22:27.271135 #42775]  INFO -- default-centos-7:     @@ -1 +1,6 @@
+I, [2019-07-01T13:22:27.271176 #42775]  INFO -- default-centos-7:     +#!/bin/bash
+I, [2019-07-01T13:22:27.271198 #42775]  INFO -- default-centos-7:     +
+I, [2019-07-01T13:22:27.271218 #42775]  INFO -- default-centos-7:     +TMOUT=600
+I, [2019-07-01T13:22:27.271238 #42775]  INFO -- default-centos-7:     +readonly TMOUT
+I, [2019-07-01T13:22:27.271989 #42775]  INFO -- default-centos-7:     +export TMOUT
+I, [2019-07-01T13:22:27.326793 #42775]  INFO -- default-centos-7:   * file_line[banner_86849] action ensure
+I, [2019-07-01T13:22:27.328686 #42775]  INFO -- default-centos-7:     - File_line adds line 'banner /etc/issue'
+I, [2019-07-01T13:22:27.347214 #42775]  INFO -- default-centos-7:   * yum_package[openssh_clients_x86_64_86857] action install (up to date)
+I, [2019-07-01T13:22:27.377457 #42775]  INFO -- default-centos-7:   * yum_package[openssh_server_x86_64_86857] action install (up to date)
+I, [2019-07-01T13:22:27.417300 #42775]  INFO -- default-centos-7:   * service[sshd_enable_86859] action enable
+I, [2019-07-01T13:22:27.422871 #42775]  INFO -- default-centos-7:     * service[sshd_enable_86859]: Service is not known to chkconfig.
+I, [2019-07-01T13:22:27.424257 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.427634 #42775]  INFO -- default-centos-7:     Error executing action `enable` on resource 'service[sshd_enable_86859]'
+I, [2019-07-01T13:22:27.428064 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.428171 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.428512 #42775]  INFO -- default-centos-7:     Chef::Exceptions::Service
+I, [2019-07-01T13:22:27.428573 #42775]  INFO -- default-centos-7:     -------------------------
+I, [2019-07-01T13:22:27.429658 #42775]  INFO -- default-centos-7:     service[sshd_enable_86859]: Service is not known to chkconfig.
+I, [2019-07-01T13:22:27.430508 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.430615 #42775]  INFO -- default-centos-7:     Resource Declaration:
+I, [2019-07-01T13:22:27.430673 #42775]  INFO -- default-centos-7:     ---------------------
+I, [2019-07-01T13:22:27.430725 #42775]  INFO -- default-centos-7:     # In /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb
+I, [2019-07-01T13:22:27.430770 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.430833 #42775]  INFO -- default-centos-7:     1425:   service 'sshd_enable_86859' do
+I, [2019-07-01T13:22:27.430883 #42775]  INFO -- default-centos-7:     1426:     service_name node['rhel7STIG']['stigrule_86859']['Setting']['sshd_enable_ServiceName']
+I, [2019-07-01T13:22:27.430941 #42775]  INFO -- default-centos-7:     1427:     action node['rhel7STIG']['stigrule_86859']['Setting']['sshd_enable_Action']
+I, [2019-07-01T13:22:27.431124 #42775]  INFO -- default-centos-7:     1428:   end
+I, [2019-07-01T13:22:27.431228 #42775]  INFO -- default-centos-7:     1429: end
+I, [2019-07-01T13:22:27.431541 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.431632 #42775]  INFO -- default-centos-7:     Compiled Resource:
+I, [2019-07-01T13:22:27.431693 #42775]  INFO -- default-centos-7:     ------------------
+I, [2019-07-01T13:22:27.431792 #42775]  INFO -- default-centos-7:     # Declared in /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb:1425:in `from_file'
+I, [2019-07-01T13:22:27.431871 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.431939 #42775]  INFO -- default-centos-7:     service("sshd_enable_86859") do
+I, [2019-07-01T13:22:27.432039 #42775]  INFO -- default-centos-7:       action [:enable]
+I, [2019-07-01T13:22:27.432187 #42775]  INFO -- default-centos-7:       default_guard_interpreter :default
+I, [2019-07-01T13:22:27.432259 #42775]  INFO -- default-centos-7:       service_name "sshd"
+I, [2019-07-01T13:22:27.432347 #42775]  INFO -- default-centos-7:       enabled nil
+I, [2019-07-01T13:22:27.432406 #42775]  INFO -- default-centos-7:       running nil
+I, [2019-07-01T13:22:27.432451 #42775]  INFO -- default-centos-7:       masked nil
+I, [2019-07-01T13:22:27.432508 #42775]  INFO -- default-centos-7:       pattern "sshd_enable_86859"
+I, [2019-07-01T13:22:27.432552 #42775]  INFO -- default-centos-7:       declared_type :service
+I, [2019-07-01T13:22:27.432609 #42775]  INFO -- default-centos-7:       cookbook_name "hardening"
+I, [2019-07-01T13:22:27.436621 #42775]  INFO -- default-centos-7:       recipe_name "remediation"
+I, [2019-07-01T13:22:27.437642 #42775]  INFO -- default-centos-7:     end
+I, [2019-07-01T13:22:27.437823 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.437978 #42775]  INFO -- default-centos-7:     System Info:
+I, [2019-07-01T13:22:27.438103 #42775]  INFO -- default-centos-7:     ------------
+I, [2019-07-01T13:22:27.438262 #42775]  INFO -- default-centos-7:     chef_version=14.0.202
+I, [2019-07-01T13:22:27.438302 #42775]  INFO -- default-centos-7:     platform=centos
+I, [2019-07-01T13:22:27.438379 #42775]  INFO -- default-centos-7:     platform_version=7.6.1810
+I, [2019-07-01T13:22:27.438424 #42775]  INFO -- default-centos-7:     ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2019-07-01T13:22:27.438487 #42775]  INFO -- default-centos-7:     program_name=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.438552 #42775]  INFO -- default-centos-7:     executable=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.438655 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.469460 #42775]  INFO -- default-centos-7:   * execute[auditd_restart] action run
+I, [2019-07-01T13:22:27.469704 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.469772 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.469846 #42775]  INFO -- default-centos-7:     Error executing action `run` on resource 'execute[auditd_restart]'
+I, [2019-07-01T13:22:27.470342 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.470380 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.470548 #42775]  INFO -- default-centos-7:     Errno::ENOENT
+I, [2019-07-01T13:22:27.470592 #42775]  INFO -- default-centos-7:     -------------
+I, [2019-07-01T13:22:27.470619 #42775]  INFO -- default-centos-7:     No such file or directory - service
+I, [2019-07-01T13:22:27.470642 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.470677 #42775]  INFO -- default-centos-7:     Resource Declaration:
+I, [2019-07-01T13:22:27.470705 #42775]  INFO -- default-centos-7:     ---------------------
+I, [2019-07-01T13:22:27.470738 #42775]  INFO -- default-centos-7:     # In /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb
+I, [2019-07-01T13:22:27.470770 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.470791 #42775]  INFO -- default-centos-7:      12: execute 'auditd_restart' do # ~FC004
+I, [2019-07-01T13:22:27.470817 #42775]  INFO -- default-centos-7:      13:   command 'service auditd restart'
+I, [2019-07-01T13:22:27.470838 #42775]  INFO -- default-centos-7:      14:   action :nothing
+I, [2019-07-01T13:22:27.470870 #42775]  INFO -- default-centos-7:      15: end
+I, [2019-07-01T13:22:27.470892 #42775]  INFO -- default-centos-7:      16: 
+I, [2019-07-01T13:22:27.470922 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.470952 #42775]  INFO -- default-centos-7:     Compiled Resource:
+I, [2019-07-01T13:22:27.470977 #42775]  INFO -- default-centos-7:     ------------------
+I, [2019-07-01T13:22:27.471003 #42775]  INFO -- default-centos-7:     # Declared in /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb:12:in `from_file'
+I, [2019-07-01T13:22:27.471037 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.471061 #42775]  INFO -- default-centos-7:     execute("auditd_restart") do
+I, [2019-07-01T13:22:27.471091 #42775]  INFO -- default-centos-7:       action [:nothing]
+I, [2019-07-01T13:22:27.471119 #42775]  INFO -- default-centos-7:       default_guard_interpreter :execute
+I, [2019-07-01T13:22:27.471144 #42775]  INFO -- default-centos-7:       command "service auditd restart"
+I, [2019-07-01T13:22:27.471173 #42775]  INFO -- default-centos-7:       backup 5
+I, [2019-07-01T13:22:27.471202 #42775]  INFO -- default-centos-7:       declared_type :execute
+I, [2019-07-01T13:22:27.471230 #42775]  INFO -- default-centos-7:       cookbook_name "hardening"
+I, [2019-07-01T13:22:27.471263 #42775]  INFO -- default-centos-7:       recipe_name "remediation"
+I, [2019-07-01T13:22:27.471292 #42775]  INFO -- default-centos-7:       domain nil
+I, [2019-07-01T13:22:27.471324 #42775]  INFO -- default-centos-7:       user nil
+I, [2019-07-01T13:22:27.471344 #42775]  INFO -- default-centos-7:     end
+I, [2019-07-01T13:22:27.471369 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.473095 #42775]  INFO -- default-centos-7:     System Info:
+I, [2019-07-01T13:22:27.473163 #42775]  INFO -- default-centos-7:     ------------
+I, [2019-07-01T13:22:27.473200 #42775]  INFO -- default-centos-7:     chef_version=14.0.202
+I, [2019-07-01T13:22:27.473237 #42775]  INFO -- default-centos-7:     platform=centos
+I, [2019-07-01T13:22:27.473272 #42775]  INFO -- default-centos-7:     platform_version=7.6.1810
+I, [2019-07-01T13:22:27.473304 #42775]  INFO -- default-centos-7:     ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2019-07-01T13:22:27.473336 #42775]  INFO -- default-centos-7:     program_name=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.473399 #42775]  INFO -- default-centos-7:     executable=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.473555 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.515971 #42775]  INFO -- default-centos-7:   * service[ssh_restart] action restart
+I, [2019-07-01T13:22:27.518066 #42775]  INFO -- default-centos-7:     * service[ssh_restart]: No custom command for restart specified and unable to locate the init.d script!
+I, [2019-07-01T13:22:27.518708 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.518766 #42775]  INFO -- default-centos-7:     Error executing action `restart` on resource 'service[ssh_restart]'
+I, [2019-07-01T13:22:27.519326 #42775]  INFO -- default-centos-7:     ================================================================================
+I, [2019-07-01T13:22:27.519398 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.519464 #42775]  INFO -- default-centos-7:     Chef::Exceptions::Service
+I, [2019-07-01T13:22:27.519530 #42775]  INFO -- default-centos-7:     -------------------------
+I, [2019-07-01T13:22:27.519591 #42775]  INFO -- default-centos-7:     service[ssh_restart]: No custom command for restart specified and unable to locate the init.d script!
+I, [2019-07-01T13:22:27.519660 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.519819 #42775]  INFO -- default-centos-7:     Resource Declaration:
+I, [2019-07-01T13:22:27.519893 #42775]  INFO -- default-centos-7:     ---------------------
+I, [2019-07-01T13:22:27.520707 #42775]  INFO -- default-centos-7:     # In /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb
+I, [2019-07-01T13:22:27.520746 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.520774 #42775]  INFO -- default-centos-7:       7: service 'ssh_restart' do
+I, [2019-07-01T13:22:27.520802 #42775]  INFO -- default-centos-7:       8:   service_name 'sshd'
+I, [2019-07-01T13:22:27.520828 #42775]  INFO -- default-centos-7:       9:   action :nothing
+I, [2019-07-01T13:22:27.520853 #42775]  INFO -- default-centos-7:      10: end
+I, [2019-07-01T13:22:27.520878 #42775]  INFO -- default-centos-7:      11: 
+I, [2019-07-01T13:22:27.520905 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.520931 #42775]  INFO -- default-centos-7:     Compiled Resource:
+I, [2019-07-01T13:22:27.520955 #42775]  INFO -- default-centos-7:     ------------------
+I, [2019-07-01T13:22:27.521843 #42775]  INFO -- default-centos-7:     # Declared in /tmp/kitchen/cache/cookbooks/hardening/recipes/remediation.rb:7:in `from_file'
+I, [2019-07-01T13:22:27.521891 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.521922 #42775]  INFO -- default-centos-7:     service("ssh_restart") do
+I, [2019-07-01T13:22:27.521950 #42775]  INFO -- default-centos-7:       action [:nothing]
+I, [2019-07-01T13:22:27.521976 #42775]  INFO -- default-centos-7:       default_guard_interpreter :default
+I, [2019-07-01T13:22:27.522002 #42775]  INFO -- default-centos-7:       service_name "sshd"
+I, [2019-07-01T13:22:27.522045 #42775]  INFO -- default-centos-7:       enabled nil
+I, [2019-07-01T13:22:27.522068 #42775]  INFO -- default-centos-7:       running nil
+I, [2019-07-01T13:22:27.522093 #42775]  INFO -- default-centos-7:       masked nil
+I, [2019-07-01T13:22:27.522117 #42775]  INFO -- default-centos-7:       pattern "ssh_restart"
+I, [2019-07-01T13:22:27.522141 #42775]  INFO -- default-centos-7:       declared_type :service
+I, [2019-07-01T13:22:27.522165 #42775]  INFO -- default-centos-7:       cookbook_name "hardening"
+I, [2019-07-01T13:22:27.522190 #42775]  INFO -- default-centos-7:       recipe_name "remediation"
+I, [2019-07-01T13:22:27.522231 #42775]  INFO -- default-centos-7:     end
+I, [2019-07-01T13:22:27.522282 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.523509 #42775]  INFO -- default-centos-7:     System Info:
+I, [2019-07-01T13:22:27.523593 #42775]  INFO -- default-centos-7:     ------------
+I, [2019-07-01T13:22:27.523817 #42775]  INFO -- default-centos-7:     chef_version=14.0.202
+I, [2019-07-01T13:22:27.523903 #42775]  INFO -- default-centos-7:     platform=centos
+I, [2019-07-01T13:22:27.523947 #42775]  INFO -- default-centos-7:     platform_version=7.6.1810
+I, [2019-07-01T13:22:27.523980 #42775]  INFO -- default-centos-7:     ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2019-07-01T13:22:27.524024 #42775]  INFO -- default-centos-7:     program_name=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.524061 #42775]  INFO -- default-centos-7:     executable=/opt/chef/bin/chef-client
+I, [2019-07-01T13:22:27.524098 #42775]  INFO -- default-centos-7:     
+I, [2019-07-01T13:22:27.524457 #42775]  INFO -- default-centos-7: 
+I, [2019-07-01T13:22:27.525152 #42775]  INFO -- default-centos-7: Running handlers:
+I, [2019-07-01T13:22:27.525682 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:58+00:00] ERROR: Running exception handlers
+I, [2019-07-01T13:22:27.525736 #42775]  INFO -- default-centos-7: Running handlers complete
+I, [2019-07-01T13:22:27.525769 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:58+00:00] ERROR: Exception handlers complete
+I, [2019-07-01T13:22:27.525798 #42775]  INFO -- default-centos-7: Chef Client failed. 114 resources updated in 07 seconds
+I, [2019-07-01T13:22:27.526106 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:58+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2019-07-01T13:22:27.526147 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:58+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2019-07-01T13:22:27.526177 #42775]  INFO -- default-centos-7: [2019-07-01T17:22:58+00:00] FATAL: Chef::Exceptions::MultipleFailures: Multiple failures occurred:
+I, [2019-07-01T13:22:27.526205 #42775]  INFO -- default-centos-7: * Chef::Exceptions::Service occurred in chef run: service[sshd_enable_86859] (hardening::remediation line 1425) had an error: Chef::Exceptions::Service: service[sshd_enable_86859]: Service is not known to chkconfig.
+I, [2019-07-01T13:22:27.526233 #42775]  INFO -- default-centos-7: * Errno::ENOENT occurred in delayed notification: execute[auditd_restart] (hardening::remediation line 12) had an error: Errno::ENOENT: No such file or directory - service
+I, [2019-07-01T13:22:27.526260 #42775]  INFO -- default-centos-7: * Chef::Exceptions::Service occurred in delayed notification: service[ssh_restart] (hardening::remediation line 7) had an error: Chef::Exceptions::Service: service[ssh_restart]: No custom command for restart specified and unable to locate the init.d script!
+I, [2019-07-01T13:22:27.526285 #42775]  INFO -- default-centos-7: 
+E, [2019-07-01T13:22:27.599766 #42775] ERROR -- default-centos-7: Converge failed on instance <default-centos-7>.
+E, [2019-07-01T13:22:27.600159 #42775] ERROR -- default-centos-7: ------Exception-------
+E, [2019-07-01T13:22:27.600187 #42775] ERROR -- default-centos-7: Class: Kitchen::ActionFailed
+E, [2019-07-01T13:22:27.600206 #42775] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2019-07-01T13:22:27.600225 #42775] ERROR -- default-centos-7: ----------------------
+E, [2019-07-01T13:22:27.600241 #42775] ERROR -- default-centos-7: ------Backtrace-------
+E, [2019-07-01T13:22:27.600258 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/provisioner/base.rb:95:in `rescue in call'
+E, [2019-07-01T13:22:27.600279 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/provisioner/base.rb:71:in `call'
+E, [2019-07-01T13:22:27.600296 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:408:in `block in converge_action'
+E, [2019-07-01T13:22:27.600313 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2019-07-01T13:22:27.600333 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:513:in `block in action'
+E, [2019-07-01T13:22:27.600351 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2019-07-01T13:22:27.600369 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:512:in `action'
+E, [2019-07-01T13:22:27.600393 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:404:in `converge_action'
+E, [2019-07-01T13:22:27.600420 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-07-01T13:22:27.600446 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-07-01T13:22:27.600472 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-07-01T13:22:27.600499 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `each'
+E, [2019-07-01T13:22:27.600525 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-07-01T13:22:27.600551 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:140:in `converge'
+E, [2019-07-01T13:22:27.600579 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2019-07-01T13:22:27.600613 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2019-07-01T13:22:27.600653 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-07-01T13:22:27.600696 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2019-07-01T13:22:27.600721 #42775] ERROR -- default-centos-7: ----End Backtrace-----
+E, [2019-07-01T13:22:27.600739 #42775] ERROR -- default-centos-7: ---Nested Exception---
+E, [2019-07-01T13:22:27.600756 #42775] ERROR -- default-centos-7: Class: Kitchen::Transport::SshFailed
+E, [2019-07-01T13:22:27.600773 #42775] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2019-07-01T13:22:27.600790 #42775] ERROR -- default-centos-7: ----------------------
+E, [2019-07-01T13:22:27.600806 #42775] ERROR -- default-centos-7: ------Backtrace-------
+E, [2019-07-01T13:22:27.600822 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/provisioner/base.rb:95:in `rescue in call'
+E, [2019-07-01T13:22:27.600838 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/provisioner/base.rb:71:in `call'
+E, [2019-07-01T13:22:27.600856 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:408:in `block in converge_action'
+E, [2019-07-01T13:22:27.600876 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2019-07-01T13:22:27.600892 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:513:in `block in action'
+E, [2019-07-01T13:22:27.600910 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2019-07-01T13:22:27.600927 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:512:in `action'
+E, [2019-07-01T13:22:27.600944 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:404:in `converge_action'
+E, [2019-07-01T13:22:27.600960 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-07-01T13:22:27.600977 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-07-01T13:22:27.600994 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-07-01T13:22:27.601010 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `each'
+E, [2019-07-01T13:22:27.601027 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-07-01T13:22:27.601043 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:140:in `converge'
+E, [2019-07-01T13:22:27.601060 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2019-07-01T13:22:27.601076 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2019-07-01T13:22:27.601093 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-07-01T13:22:27.601109 #42775] ERROR -- default-centos-7: /opt/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2019-07-01T13:22:27.601126 #42775] ERROR -- default-centos-7: ----End Backtrace-----

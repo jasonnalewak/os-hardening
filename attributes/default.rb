@@ -427,7 +427,7 @@ default['rhel7STIG']['stigrule_86681']['Setting']['kdump_stop_ServiceName'] = 'k
 default['rhel7STIG']['stigrule_86681']['Setting']['kdump_stop_Action'] = :stop
 
 # R-86689 RHEL-07-021340
-default['rhel7STIG']['stigrule_86689']['Manage'] = true
+default['rhel7STIG']['stigrule_86689']['Manage'] = false
 default['rhel7STIG']['stigrule_86689']['Title'] = "The Red Hat Enterprise Linux operating system must use a separate file system for /tmp (or equivalent)."
 default['rhel7STIG']['stigrule_86689']['Severity'] = 'low'
 default['rhel7STIG']['stigrule_86689']['Setting']['tmp_mount_ServiceName'] = 'tmp.mount'
@@ -441,7 +441,7 @@ default['rhel7STIG']['stigrule_86701']['Setting']['telnet_server_PackageName'] =
 default['rhel7STIG']['stigrule_86701']['Setting']['telnet_server_Action'] = :remove
 
 # R-86703 RHEL-07-030000
-default['rhel7STIG']['stigrule_86703']['Manage'] = true
+default['rhel7STIG']['stigrule_86703']['Manage'] = false
 default['rhel7STIG']['stigrule_86703']['Title'] = "The Red Hat Enterprise Linux operating system must be configured so that auditing is configured to produce records containing information to establish what type of events occurred, where the events occurred, the source of the events, and the outcome of the events. These audit records must also identify individual identities of group account users."
 default['rhel7STIG']['stigrule_86703']['Severity'] = 'high'
 default['rhel7STIG']['stigrule_86703']['Setting']['auditd_enable_ServiceName'] = 'auditd'

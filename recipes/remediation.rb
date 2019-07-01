@@ -26,12 +26,12 @@ if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_
 end
 
 if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
-  directory '/etc/audisp/plugin.d' do # added to make cookbook work
+  directory '/etc/audisp/plugins.d' do # added to make cookbook work
     action :create
   end
 end
 
-if node['rhel7STIG']['stigrule_86707']['Manage'] || node['rhel7STIG']['stigrule_86709']['Manage'] || node['rhel7STIG']['stigrule_86711']['Manage'] || node['rhel7STIG']['stigrule_87815']['Manage']
+if node['rhel7STIG']['stigrule_95727']['Manage'] || node['rhel7STIG']['stigrule_95727']['Manage']
   file '/etc/audisp/audisp-remote.conf' do
     action :create_if_missing
   end
@@ -349,18 +349,24 @@ if node['rhel7STIG']['stigrule_86593']['Manage']
     action node['rhel7STIG']['stigrule_86593']['Setting']['ypserv_Action']
   end
 end
+
+# need to create path for aide cron job to work
+directory '/etc/cron.daily' do
+  action :create
+end
+
+if node['rhel7STIG']['stigrule_86597']['Manage']
+  yum_package 'aide_86597' do
+    package_name node['rhel7STIG']['stigrule_86597']['Setting']['aide_PackageName']
+    action node['rhel7STIG']['stigrule_86597']['Setting']['aide_Action']
+  end
+end
 if node['rhel7STIG']['stigrule_86597']['Manage']
   file '_etc_cron_daily_aide_86597' do
     path node['rhel7STIG']['stigrule_86597']['Setting']['_etc_cron_daily_aide_Path']
     content node['rhel7STIG']['stigrule_86597']['Setting']['_etc_cron_daily_aide_Content']
     mode node['rhel7STIG']['stigrule_86597']['Setting']['_etc_cron_daily_aide_Mode']
-    notifies :install, 'yum_package[aide_86597]', :before
-  end
-end
-if node['rhel7STIG']['stigrule_86597']['Manage']
-  yum_package 'aide_86597' do
-    package_name node['rhel7STIG']['stigrule_86597']['Setting']['aide_PackageName']
-    action node['rhel7STIG']['stigrule_86597']['Setting']['aide_Action']
+    notifies :install, 'yum_package[aide_86597]', :immediately
   end
 end
 if node['rhel7STIG']['stigrule_86599']['Manage']
@@ -423,6 +429,12 @@ if node['rhel7STIG']['stigrule_86609']['Manage']
     action node['rhel7STIG']['stigrule_86609']['Setting']['autofs_stop_Action']
   end
 end
+
+# need to add config file for selinux
+file '/etc/selinux/config' do
+  action :create_if_missing
+end
+
 if node['rhel7STIG']['stigrule_86613']['Manage']
   file_line '_etc_selinux_config_86613' do
     path node['rhel7STIG']['stigrule_86613']['Setting']['_etc_selinux_config_Path']
@@ -455,6 +467,13 @@ if node['rhel7STIG']['stigrule_86617']['Manage']
     separator '='
   end
 end
+
+# need to create file for rsyslog.conf
+
+file '/etc/rsyslog.conf' do
+  action :create_if_missing
+end
+
 if node['rhel7STIG']['stigrule_86675']['Manage']
   file_line '_etc_rsyslog_conf_86675' do
     path node['rhel7STIG']['stigrule_86675']['Setting']['_etc_rsyslog_conf_Path']
@@ -488,9 +507,12 @@ if node['rhel7STIG']['stigrule_86681']['Manage']
     action node['rhel7STIG']['stigrule_86681']['Setting']['kdump_stop_Action']
   end
 end
+
+# tmp_mount not recognized by chkconfig (problems with systemd?)
+
 if node['rhel7STIG']['stigrule_86689']['Manage']
-  service 'tmp_mount_86689' do
-    service_name node['rhel7STIG']['stigrule_86689']['Setting']['tmp_mount_ServiceName']
+  service 'tmp.mount' do
+    # service_name node['rhel7STIG']['stigrule_86689']['Setting']['tmp_mount_ServiceName']
     action node['rhel7STIG']['stigrule_86689']['Setting']['tmp_mount_Action']
   end
 end
@@ -512,6 +534,21 @@ if node['rhel7STIG']['stigrule_86703']['Manage']
     action node['rhel7STIG']['stigrule_86703']['Setting']['auditd_start_Action']
   end
 end
+
+# file /etc/audit/rules.d/audit.rules needs to exist
+
+directory 'etc/audit' do
+  action :create
+end
+
+directory '/etc/audit/rules.d' do
+  action :create
+end
+
+file '/etc/audit/rules.d/audit.rules' do
+  action :create_if_missing
+end
+
 if node['rhel7STIG']['stigrule_86705']['Manage']
   file_line '_etc_audit_rules_d_audit_rules_critical_error_86705' do
     path node['rhel7STIG']['stigrule_86705']['Setting']['_etc_audit_rules_d_audit_rules_critical_error_Path']
@@ -551,6 +588,12 @@ if node['rhel7STIG']['stigrule_87815']['Manage']
     notifies :run, 'execute[auditd_restart]', :delayed
   end
 end
+
+# /etc/audit/auditd.conf file needs to exist
+file '/etc/audit/auditd.conf' do
+  action :create_if_missing
+end
+
 if node['rhel7STIG']['stigrule_86715']['Manage']
   file_line '_etc_audit_auditd_conf_86715' do
     path node['rhel7STIG']['stigrule_86715']['Setting']['_etc_audit_auditd_conf_Path']
